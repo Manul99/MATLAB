@@ -1,0 +1,31 @@
+load fisheriris.mat
+
+
+% Finding total number of rows
+data = size(meas,1);
+fprintf('a. Total number of rows: %d\n', data);
+
+% Define each columns Mean,the Sandard Deviation,Maximum,Minimum and root
+% square mean
+
+% features = size(meas,2);
+
+for i = 1:4
+    feature = meas(:,i);
+    Mean = mean(feature)
+    standarDeviation = std(feature)
+    maximum = max(feature)
+    minimum = min(feature)
+    root = rms(feature)
+
+end
+
+
+  % Display the values
+    fprintf('Mean: %.4f\n',feature);
+    fprintf('Standard Deviation: %.4f\n',standarDeviation);
+    fprintf('Maximum :%.4f\n',maximum);
+    fprintf('Minimum:%.4f\n',minimum);
+    fprintf('Root mean square:%.4f\n',root);
+
+
